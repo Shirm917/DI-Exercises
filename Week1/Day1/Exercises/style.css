@@ -1,0 +1,48 @@
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+span {
+    background-color: yellow;
+}
+
+
+.list-name {
+    font-weight: bold;
+    text-decoration: underline;
+    text-indent: 30px;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border: 5px solid rgba(255, 0, 0, 0.764);
+}
+
+h6 {
+    color: red;
+    text-align: center;
+    border: 1px solid red;
+    
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+table {
+    margin-bottom: 60px;
+}
