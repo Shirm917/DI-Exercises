@@ -61,3 +61,54 @@ footer p {
     margin-top: 400px;
 }
 
+/* Extra-Large */
+@media screen and (min-width: 1200px) {
+    nav {
+        background-color: black; 
+        color: white;
+    }
+
+
+}
+
+/* Large */
+@media screen and (min-width: 992px) {
+    nav {
+        background-color: red;
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    div > p {
+        position: relative;
+        top: 120px;
+    }
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        background-color: lightgreen;
+        color: black;
+    }
+}
+
+/* Small */
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    nav {
+        background-color: yellow;
+        color: black;
+    }
+}
