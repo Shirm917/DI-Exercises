@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: space-between;
+}
+
+.one, .two, .three {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.one, .three {
+    height: 15vh;
+}
+
+.two {
+    width: 60%;
+    height: 30vh;
+    margin: 0 auto;
+    margin: 15px auto;
+}

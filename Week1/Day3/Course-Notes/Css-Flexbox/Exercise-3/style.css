@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo, .team, .products {
+    color: white;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team, .products {
+    width: 45%;
+}
+
+.logo {
+    background-color: rgb(147, 91, 224);
+    width: 10%;
+}
+
+.team {
+    background-color: rgb(13, 209, 209);
+}
+
+.products {
+    background-color: rgb(242, 88, 88);
+}

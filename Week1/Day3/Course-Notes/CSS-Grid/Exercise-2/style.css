@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-gap: 5px;
+}
+
+.header {
+    background-color: rgb(21, 166, 223);
+    grid-column: 1 / 12;
+}
+
+.hero {
+    background-color: rgb(229, 164, 229);
+    grid-column: 1 / 5;
+    grid-row: 2 / 4;
+}
+
+.main-content {
+    background-color: rgb(232, 208, 24);
+    grid-column: 5 / 12;
+    grid-row: 2 / 6;
+}
+
+.sidebar {
+    background-color: rgb(18, 189, 18);
+    grid-column: 1 / 5;
+    grid-row: 4 / 9;
+}
+
+.extra-content {
+    background-color: rgb(78, 75, 75);
+    grid-column: 5 / 12;
+    grid-row: 6 / 9;
+}
+
+.related-images {
+    background-color: rgb(31, 153, 31);
+    grid-column: 1 / 10;
+    grid-row: 9 / 11;
+}
+
+.related-posts {
+    background-color: rgb(255, 192, 203);
+    grid-column: 10 / 12;
+    grid-row: 9 / 11;
+}
+
+.footer {
+    background-color: rgb(231, 155, 14);
+    grid-column: 1 / 12;
+}
