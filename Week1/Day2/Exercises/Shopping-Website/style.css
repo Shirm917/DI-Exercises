@@ -9,14 +9,11 @@ nav {
   position: relative;
 }
 
-.icon {
+i {
+  color: white;
   position: absolute;
   left: 20px;
   top: 8px;
-}
-
-i {
-  color: white;
 }
 
 .link {

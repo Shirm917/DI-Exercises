@@ -23,8 +23,27 @@ img {
     top: 5px;
 }
 
-span {
+.new, .off {
+    position: absolute;
+    top: 11px;
+    color: white;
+    font-size: 12px;
+}
+
+.new {
+    left: 3px;
+}
+
+.off {
+    right: 2px;
+}
+
+.old-price {
     text-decoration: line-through;
+}
+
+.new-price {
+    color: green;
 }
 
 p, button {
@@ -38,35 +57,29 @@ p, button {
 
 .pic1 {
     background-image: url("image1.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    margin-top: 10px;
 }
 
 .pic2 {
     background-image: url("image2.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
 .pic3 {
     background-image: url("image3.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 
 .pic4 {
     background-image: url("image4.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.pic5 {
-    background-image: url("image1.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
