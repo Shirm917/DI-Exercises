@@ -1,0 +1,31 @@
+.border {
+    border: 1px solid black;
+}
+
+.sidebar {
+    color: black;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    color: blue;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+}
+
+img {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.pic-three {
+    height: 135px;
+}
+
