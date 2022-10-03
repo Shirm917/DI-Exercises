@@ -6,43 +6,58 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 50%;
     height: 100%;
 } 
 
 .side1 {
-    border: 1px solid black;
     margin-right: 20px;
     background-color: lightgray;
 }
 
 img {
     border-radius: 50%;
+    margin-top: 70px;
 }
 
-h1, i {
+h1, .title, .number, .email, .address, i {
     text-align: center;
+    font-family: Garamond, Cambria, serif;
 }
 
-i {
+.email {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+}
+
+a i {
     display: inline-block;
     width: 100%;
+    margin-top: 30px;
 }
 
-.side1 p {
-    text-align: center;
+h3 {
+    margin-top: 15px;
 }
 
 .side2 {
-    border: 1px solid red;
+    margin-left: 10px;
+}
+
+.edulist {
+    list-style-position: inside;
+    text-indent: 20px;
 }
 
 .lists {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    border: 1px solid green;
+    justify-content: space-between;
     width: auto;
 }
 
