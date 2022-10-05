@@ -1,0 +1,13 @@
+.bar {
+    width: auto;
+}
+
+.extra {
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+.button {
+    background-color: green;
+    color: white;
+}
