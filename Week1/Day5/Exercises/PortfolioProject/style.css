@@ -1,0 +1,157 @@
+/* Whole Page Css Start */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html,h1,h2,h3,h4,h5,h6,a{
+    font-family: "Raleway";
+}
+
+/* Whole Page Css Start */
+
+/* Navbar Start */
+
+.bg {
+    background-color: rgb(243, 137, 9);
+}
+
+/* Navbar End */
+
+/* Header Start */
+
+.header {
+    background-image: url("./images/headerback.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+#overlay {
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.headertext {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+.orange-text {
+    color: rgb(243, 137, 9);
+}
+
+.button {
+    background-color: rgb(243, 137, 9);
+    color: white;
+}
+
+/* Header End */
+
+/* Sections Start */
+
+
+
+/* About Me Start */
+
+.center {
+    text-align: center;
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.about-me-left {
+    border-right: 1px solid rgb(6, 125, 125);
+    padding: 10px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+}
+
+.about-me-right {
+    margin-left: 10px;
+}
+
+.name {
+    color: rgb(86, 182, 182);
+}
+
+/* About Me End */
+
+/* Portfolio Start */
+
+.port-pic {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+/* Portfolio End */
+
+/* Blog Start */
+
+.cards {
+    display: inline-block;
+}
+
+.card-img {
+    height: 200px;
+}
+
+/* Blog End */
+
+/* Our Team Start */
+
+.team-img {
+    height: 200px;
+    width: 200px;
+}
+
+.team-name {
+    background-color: rgb(243, 137, 9);
+    border-bottom-left-radius: 93%;
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* Our Team End */
+
+/* Contact Form Start */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left {
+    margin-right: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-right {
+    width: 50%;
+}
+
+.send {
+    background-color: rgb(243, 137, 9);
+    width: 100%;
+}
+
+/* Contact Form End */
+
+/* Sections End */
