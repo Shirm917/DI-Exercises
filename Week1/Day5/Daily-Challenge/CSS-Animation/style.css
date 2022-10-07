@@ -1,0 +1,152 @@
+
+.divs {
+    width: 100px;
+    height: 100px;
+    background-color: #4141cf;
+    margin: 20px;
+}
+
+/* Fade in Start */
+.fade {
+    opacity: .2;
+}
+
+.fade:hover {
+    opacity: 1;
+}
+/* Fade in End */
+
+/* Change Color Start */
+.color:hover {
+    background-color: rgb(220, 74, 142);
+}
+/* Change Color End */
+
+/* Grow Start */
+.grow:hover {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+}
+/* Grow Start */
+
+/* Shrink Start */
+.shrink:hover {
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+}
+/* Shrink End */
+
+/* Rotate Start */
+.rotate:hover {
+    -webkit-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+}
+/* Rotate End */
+
+/* Square to Circle Start */
+.circle:hover {
+    border-radius: 50%;
+}
+/* Square to Circle End */
+
+/* 3D Shadow Start */
+.threed:hover {
+    box-shadow: 
+            1px 2px rgb(33, 177, 255),
+            4px 2px rgb(33, 177, 255),
+            3px 4px rgb(33, 177, 255);
+    -webkit-transform: translateX(-4px);
+    transform: translateX(-4px);
+}
+/* 3D Shadow End */
+
+/* Swing Start */
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-20px);
+       transform: translateX(-20px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-20px);
+       transform: translateX(-20px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.swing:hover {
+    -webkit-animation: swing 2s ease;
+    animation: swing 2s ease;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+}
+/* Swing End */
+
+/* Inset Border Start */
+.border:hover {
+    box-shadow: inset 2px 2px 8px 20px rgb(205, 81, 81);
+}
+/* Inset Border End */
+
+
+
+
+
