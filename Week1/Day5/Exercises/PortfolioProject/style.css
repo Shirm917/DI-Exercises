@@ -57,19 +57,25 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 /* Sections Start */
 
+.center-div {
+    width: 60%;
+    margin: 0 auto;
+}
 
+.center-text {
+    text-align: center;
+}
 
 /* About Me Start */
 
-.center {
-    text-align: center;
+.border-test {
+    border: 1px solid black;
 }
 
 .about-me-container {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    width: 50%;
 }
 
 .about-me-left {
@@ -106,6 +112,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .cards {
     display: inline-block;
+    margin: 10px;
 }
 
 .card-img {
@@ -125,7 +132,6 @@ html,h1,h2,h3,h4,h5,h6,a{
     background-color: rgb(243, 137, 9);
     border-bottom-left-radius: 93%;
     width: 200px;
-    margin: 0 auto;
 }
 
 /* Our Team End */
