@@ -68,10 +68,6 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 /* About Me Start */
 
-.border-test {
-    border: 1px solid black;
-}
-
 .about-me-container {
     display: flex;
     align-items: center;
