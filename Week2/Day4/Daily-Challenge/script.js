@@ -15,14 +15,13 @@ for (let i = 0; i < array.length; i++) {
         longestWord = array[i].length;
     }
 }
+console.log(symbol.repeat(longestWord + 4)); // Top line
 // A function to create the frame and put the words in
 function stars() {
-    console.log(symbol.repeat(longestWord + 4)); // Top line
     for (let i = 0; i < array.length; i++) {
         let spaces = whiteSpace.repeat(longestWord - array[i].length);
         console.log(symbol + " " + array[i] + spaces + " " + symbol);
     }
-    console.log(symbol.repeat(longestWord + 4)); // Bottom line
 }
-
-stars();
+stars(); // Calling the function so the middle appears
+console.log(symbol.repeat(longestWord + 4)); // Bottom line
