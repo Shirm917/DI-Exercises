@@ -25,7 +25,7 @@ function infoAboutMe () {
 }
 
 // Call the function.
-// infoAboutMe();
+infoAboutMe();
 
 // Part II : function with three parameters
 
@@ -39,8 +39,8 @@ function infoAboutPerson (personName, personAge, personFavoriteColor) {
 }
 
 // Call the function twice with the following arguments:
-// infoAboutPerson("David", 45, "blue")
-// infoAboutPerson("Josh", 12, "yellow")
+infoAboutPerson("David", 45, "blue")
+infoAboutPerson("Josh", 12, "yellow")
 
 // Exercise 2
 // Instructions
@@ -70,7 +70,7 @@ function calculateTip () {
 
 // Call the calculateTip() function.
 
-// calculateTip();
+calculateTip();
 
 // Exercise 3
 
@@ -89,7 +89,7 @@ function isDivisible() {
     }
     console.log(sum);
 }
-// isDivisible();
+isDivisible();
 // Bonus: Add a parameter divisor to the function.
 function isDivisible2(divisor) {
     let sum = 0;
@@ -102,8 +102,8 @@ function isDivisible2(divisor) {
     console.log(sum);
 }
 
-// isDivisible2(3);
-// isDivisible2(45);
+isDivisible2(3);
+isDivisible2(45);
 
 // Exercise 4 
 // Instructions
@@ -146,9 +146,9 @@ function myBill() {
     console.log(total);
 }
 // Call the myBill() function.
-// myBill();
+myBill();
 // Bonus: If the item is in stock, decrease the item’s stock by 1
-// console.log(stock);
+console.log(stock);
 
 // Exercise 5 
 // Create a function named changeEnough(itemPrice, amountOfChange) that receives two arguments :
@@ -240,5 +240,5 @@ function totalVacationCost() {
     return totalPrice;
 }
 // Call the function totalVacationCost()
-// totalVacationCost();
+totalVacationCost();
 // Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
