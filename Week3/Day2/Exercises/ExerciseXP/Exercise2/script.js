@@ -37,7 +37,7 @@ function submit(event) {
     for (const elem of elements) {
         if (elem.value === "Submit") {
             break;
-        } else if (elem.value !== "") {
+        } else if (elem.value.length !== 0) {
             const liElement = document.createElement("li");
             const ulElement = document.querySelector("ul");
             const liText= document.createTextNode(elem.value);
