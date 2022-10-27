@@ -23,4 +23,4 @@ function allowLetter(event) {
 
 
 const input = document.body.firstElementChild;
-input.addEventListener("keypress", allowLetter)
+input.addEventListener("keydown", allowLetter)
