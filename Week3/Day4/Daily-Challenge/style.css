@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(244, 96, 96);
+}
+
+h1 {
+    text-align: center;
+}
+
+form, 
+div {
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    width: 27%;
+}
+
+button {
+    color: rgb(33, 33, 224);
+    border: none;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+div {
+    margin-top: 10px;
+}
+
+i {
+    color: rgb(244, 96, 96);
+    background-color: black;
+    margin: 2px;
+}
+
+input[type="checkbox"] {
+    margin: 2px;
+}
+
