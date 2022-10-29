@@ -46,6 +46,7 @@ html,h1,h2,h3,h4,h5,h6,a{
 
 .orange-text {
     color: rgb(243, 137, 9);
+    font-size: 50px;
 }
 
 .button {
