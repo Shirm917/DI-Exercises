@@ -117,9 +117,9 @@ lgTv.volumeUp();
 // It overrides the method increase, so it increase the volume by 10 and not by 1
 // Add a attribute of Netflix that should be equal to true by default
 class SmartTv extends Tv {
-    constructor(brandSmartTv, channelSmartTv = 1, volumeSmartTv = 50) {
+    constructor(brandSmartTv, channelSmartTv = 1, volumeSmartTv = 50, isnetflix = true) {
         super(brandSmartTv, channelSmartTv = 1, volumeSmartTv = 50);
-        this.netflix = true;
+        this.netflix = isnetflix;
     }
     volumeUp() {
         return this.volumeTV += 10;
