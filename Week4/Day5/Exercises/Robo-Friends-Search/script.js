@@ -1,3 +1,5 @@
+// Mini-Project
+
 const robots = [
     {
       id: 1,
@@ -109,6 +111,7 @@ function createRobots() {
 createRobots(); // calling the createRobots function
 createSearchBar(); // calling this after so it's first on the page because of prepend
 
+// function to filter through the robots
 const inputSearch = document.getElementById("inputSearch");
 function findRobot() {
     const containerDivs = document.querySelectorAll("#container div");
