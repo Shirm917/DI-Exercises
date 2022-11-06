@@ -76,7 +76,7 @@ function checkEmail(userEmail) {
             throw new Error("Missing @ in the email");
         }
     } catch(err) {
-        console.log(err);
+        console.log(err.message);
     }
 }
 
