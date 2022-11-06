@@ -16,24 +16,22 @@ const sortedArray = array.sort(compareNumbers);
 
 sort(array); // [1, 1, 1, 1, 2, 2, 2, 4, 5, 10, 20, 20, 391, 392, 591]
 
-function join() {
-    const arr = [];
-    let newArr = [];
-    for (let i = 0; i < sortedArray.length; i++) {
-        if (sortedArray[i] === sortedArray[i - 1] || newArr[newArr.length - 1] === sortedArray[i] || newArr[newArr.length - 1] === sortedArray[i]) {
-            newArr.push(sortedArray[i]);
-        } else if (sortedArray[i] >= 0) {
-            if (newArr.length > 0) {
-                arr.push(newArr);
-                newArr = [];
-            }
-            arr.push(sortedArray[i]);
+function join2() {
+    const arr1 = [];
+    let filterArr;
+    for (let i = 0; i < sortedArray.length + i; i++) {
+        for (let j = 0; j < sortedArray.length; j++) {
+            filterArr = sortedArray.filter((element, index, arr) => arr[index] === arr[0]);
         }
+        if (filterArr.length < 2) {
+            arr1.push(parseInt(filterArr));
+        } else {
+            arr1.push(filterArr);
+        }
+        sortedArray.splice(0, filterArr.length);
+        filterArr = [];
     }
-    console.log(arr);
+    console.log(arr1);
 }
 
-join();
-
-// // sortedArray[i] === sortedArray[i + 1] || sortedArray[i] === sortedArray[i - 1]
-// // sortedArray.includes(sortedArray[i], i + 1)
+join2();
