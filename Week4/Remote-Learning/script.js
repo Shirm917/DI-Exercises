@@ -10,8 +10,7 @@ const array = [1,2,4,591,392,391,2,5,10,2,1,1,1,20,20];
 function compareNumbers(a, b) {
     return a - b;
 }
-function sort(arr) {
-}
+
 const sortedArray = array.sort(compareNumbers);
 
 sort(array); // [1, 1, 1, 1, 2, 2, 2, 4, 5, 10, 20, 20, 391, 392, 591]
