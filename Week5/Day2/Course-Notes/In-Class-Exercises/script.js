@@ -40,7 +40,7 @@ function displayUsersInfo(usersInfo) {
         const paraElement = document.createElement("p");
         const paraText = document.createTextNode(`${element["name"]} - Email: ${element["email"]}, City: ${element["address"]["city"]}`);
         paraElement.append(paraText);
-        document.body.append(paraElement);
+        document.body.prepend(paraElement);
     });
 }
 
@@ -48,5 +48,5 @@ function displayError() {
     const paraElement = document.createElement("p");
     const paraText = document.createTextNode("ERROR");
     paraElement.append(paraText);
-    document.body.append(paraElement);
+    document.body.prepend(paraElement);
 }
