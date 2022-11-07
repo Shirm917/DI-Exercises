@@ -40,7 +40,7 @@ function displayUsersInfo(usersInfo) {
         const paraElement = document.createElement("p");
         const paraText = document.createTextNode(`${element["name"]} - Email: ${element["email"]}, City: ${element["address"]["city"]}`);
         paraElement.append(paraText);
-        document.body.prepend(paraElement);
+        document.body.append(paraElement);
     });
 }
 
