@@ -36,27 +36,56 @@
 // Exercise
 // PART I
 // Use fetch to fetch one 1 random gif with the category of "sun", then append the gif to the page. Use this documentation https://developers.giphy.com/docs/api/endpoint#random https://api.giphy.com/v1/gifs/random?tag=sun&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My
-function fetchGifs() {
-    fetch("https://api.giphy.com/v1/gifs/random?tag=sun&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
-    .then(result => {
-        if (result.status !== 200) {
-            throw new Error ("Failed Status!");
-        } else {
-            return result.json();
-        }
-    })
-    .then(gifObject => (displayGif(gifObject.data)))
-    .catch(err => alert(err));
-}
+// function fetchGifs() {
+//     fetch("https://api.giphy.com/v1/gifs/random?tag=sun&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+//     .then(result => {
+//         if (result.status !== 200) {
+//             throw new Error ("Failed Status!");
+//         } else {
+//             return result.json();
+//         }
+//     })
+//     .then(gifObject => (displayGif(gifObject.data)))
+//     .catch(err => alert(err));
+// }
 
 // fetchGifs();
 
-function displayGif(gif) {
+// function displayGif(gif) {
+//     const divElement = document.querySelector("div");
+//     const imgElement = document.createElement("img");
+//     imgElement.setAttribute("src", gif.images.original.url);
+//     divElement.append(imgElement);
+// }
+
+// Using async-await
+async function fetchGifs() {
+    const result = await fetch("https://api.giphy.com/v1/gifs/random?tag=sun&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My")
+    if (result.status !== 200) {
+        throw new Error ("Failed Status!");
+    } else {
+        const resObj = await result.json();
+        const gifUrl = resObj.data.images.original.url;
+        return gifUrl;
+    }
+}
+
+function displayGif(url) {
     const divElement = document.querySelector("div");
     const imgElement = document.createElement("img");
-    imgElement.setAttribute("src", gif.images.original.url);
+    imgElement.setAttribute("src", url);
     divElement.append(imgElement);
 }
+
+async function mix() {
+    try {
+        const gif = await fetchGifs();
+        displayGif(gif);
+    } catch (err) {
+        displayGif("https://media.giphy.com/media/JT7Td5xRqkvHQvTdEu/giphy.gif")
+    }
+}
+mix();
 // Part II
 // Instead of having a fixed category of gif. First, fetch one word from this api :http://random-word-api.herokuapp.com/word?number=1 You will then fetch 1 random gif, depending on the word. The word will be the gif category Display the word and the gif on the page
 // For example: you will fetch the random-word-api. This api will return a random word - for example : "happy" Using this word as a category, you will fetch one random gif with the category of "happy" and display it on the page
@@ -93,7 +122,7 @@ function fetchGifs2() {
     .catch(err => alert(err));
 }
 
-fetchGifs2();
+// fetchGifs2();
 
 function displayRandomGif(gif) {
     const divElement = document.querySelector("div");
