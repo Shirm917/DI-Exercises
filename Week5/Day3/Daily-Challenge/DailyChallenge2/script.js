@@ -71,8 +71,8 @@ function toJs() {
 // if the user enters the word "Hello", the promise resolves with this value ["....", ".", ".-..", ".-..","---"]
 // if the user entered the word "¡Hola!", the promise rejects because the character "¡" doesn't exist in the morse javascript object
 function toMorse(morseJS) {
-    const promptUser = prompt("Please write a word or a sentence");
-    const promptAnswer = promptUser.toLowerCase().split("");
+    const promptUser = prompt("Please write a word or a sentence").toLowerCase();
+    const promptAnswer = promptUser.replace(/\s/g, "").split("");
     const morseArray = [];
     const answer = new Promise((resolve, reject) => {
         if (promptAnswer.every(element => Object.keys(morseJS).includes(element))) {
