@@ -24,14 +24,17 @@ function getValues(event) {
 }
 
 async function fetchTimes(urlOne, urlTwo) {
-    const resObjCity1 = await fetch(urlOne);
-    const resObjCity2 = await fetch(urlTwo);
-    const jsObjCity1 = await resObjCity1.json()
-    const jsObjCity2 = await resObjCity2.json()
-    Promise.all([jsObjCity1, jsObjCity2])
-    .then(jsObjArr => [jsObjArr[0].results.sunrise, jsObjArr[1].results.sunrise])
-    .then(sunrisesArr => display(sunrisesArr))
-    .catch(err => alert(err));
+    try {
+        const resObjCity1 = await fetch(urlOne);
+        const resObjCity2 = await fetch(urlTwo);
+        const jsObjCity1 = await resObjCity1.json()
+        const jsObjCity2 = await resObjCity2.json()
+        Promise.all([jsObjCity1, jsObjCity2])
+        .then(jsObjArr => [jsObjArr[0].results.sunrise, jsObjArr[1].results.sunrise])
+        .then(sunrisesArr => display(sunrisesArr));
+    } catch(err) {
+        alert(err);
+    }
 }
 
 function display(arr) {
