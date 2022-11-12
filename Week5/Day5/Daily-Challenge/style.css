@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(imgs/jason-leung-SAYzxuS1O3M-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: rgba(43, 43, 93, 0.4);
+    height: 80%;
+    width: 70%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+h1,
+label,
+select,
+input,
+button {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+form {
+    width: 100%;
+}
+
+select {
+    width: 70%;
+}
+
+select,
+input,
+button {
+    background-color: rgba(14, 14, 141, 0.3);
+    border: 1px solid black;
+    color: white;
+}
+
+button {
+    border: 1px solid white;
+    width: 20%;
+}
+
+input {
+    width: 40%;
+}
+
+p {
+    height: 20px;
+    color: white;
+    background-color: rgba(14, 14, 141, 0.3);
+    max-width: 100%;
+}
+
+i {
+    position: absolute;
+    top: 42%;
+    left: 30%;
+}
