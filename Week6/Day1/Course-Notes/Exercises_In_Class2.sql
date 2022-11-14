@@ -15,12 +15,12 @@ COPY city_info(event_datetime,city,temperature,light,airquality_raw,sound,humidi
 FROM '/Users/ShirMarkowitz/Desktop/DI/Week6/Day1/Course-Notes/city_info.csv' DELIMITER ',' CSV HEADER;
 
 -- 1. Select everything from the table. (every row and columns) - How many records does the table have?
-SELECT * FROM city_info; -- 4711 Records
+SELECT COUNT(*) FROM city_info; -- 4711 Records
 -- 2. What was Bostons temperature on the 03/01/2015 at 11am ?
-SELECT * FROM city_info WHERE city = 'Boston' and EXTRACT(HOUR FROM event_datetime) = 11 and DATE(event_datetime) = '2015-03-01';
+SELECT * FROM city_info WHERE city = 'Boston' AND EXTRACT(HOUR FROM event_datetime) = 11 AND DATE(event_datetime) = '2015-03-01';
 -- The tempature was 3.08
 -- 3. When (ie. days and hours) was the temperature between 28 and 30 degrees in San Francisco ?
-SELECT * FROM city_info WHERE temperature > 28 AND temperature < 30 AND city = 'San Francisco' ;
+SELECT EXTRACT(HOUR FROM event_datetime), EXTRACT(DAY FROM event_datetime) FROM city_info WHERE temperature BETWEEN 28 AND 30 AND city = 'San Francisco';
 -- 12 rows at different hours, execute line to see all the days and hours 
 -- 4. Which city was the most noisy (show the name of the city, the date and the noise index)? - Don't use the MAX function
 SELECT city, event_datetime, sound FROM city_info ORDER BY sound DESC LIMIT 1;
@@ -31,14 +31,14 @@ SELECT city, event_datetime, sound FROM city_info ORDER BY sound ASC LIMIT 1;
 -- 6. Show the dust index of San Francisco on the 03/26/2015 after 20:00.
 SELECT city, event_datetime, dust FROM city_info WHERE city = 'San Francisco' AND DATE(event_datetime) = '2015-03-26' AND EXTRACT(HOUR FROM event_datetime) > 20;
 -- 7. When (ie. days and hours) is the humidity index less that 40 or more than 60 in Geneva?
-SELECT * FROM city_info WHERE city = 'Geneva' AND (humidity < 40 OR humidity > 60);
+SELECT EXTRACT(HOUR FROM event_datetime), EXTRACT(DAY FROM event_datetime) FROM city_info WHERE city = 'Geneva' AND (humidity < 40 OR humidity > 60);
 -- 368 rows at different hours, execute line to see all the days and hours
 -- 8. Where and when (Find the day (Sunday-Saturday)) is the light index the highest? - Use an alias for the day of the week.
 SELECT city ,EXTRACT(DOW FROM event_datetime) AS day_of_week FROM city_info ORDER BY light DESC LIMIT 1;
 -- Rio de Janeiro and Monday
 -- 9. Select only the info of the cities that start with an "S" (uppercase or lowercase). - Look at the DISTINCT constraint.
-Select * FROM city_info WHERE city ILIKE 's%';
+Select DISTINCT(city) FROM city_info WHERE city ILIKE 's%';
 -- 10. Add to the table, todays information in Israel - of this very hour. (event_datetime,city,temperature,light,airquality_raw,sound,humidity,dust) -- - Use the return statement to see what you just inserted:
 INSERT INTO city_info(event_datetime,city,temperature,light,airquality_raw,sound,humidity,dust)
-VALUES('2022-11-13 20:00', 'Raanana', 64, 0, 80, 800, 52, 400);
-SELECT * FROM city_info WHERE city = 'Raanana';
+VALUES(NOW(), 'Ra''anana', 64, 0, 80, 800, 52, 400);
+SELECT * FROM city_info WHERE city = 'Ra''anana';
