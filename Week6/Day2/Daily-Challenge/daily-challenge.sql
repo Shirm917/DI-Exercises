@@ -24,7 +24,7 @@ SELECT * FROM SecondTab
 
 -- Questions
 -- Q1. What will be the OUTPUT of the following statement?
--- The output is 0
+-- The output is 0, we can't compare if it's not in null, it gives nothing
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
 
@@ -36,8 +36,7 @@ SELECT * FROM SecondTab
 
 
 -- Q3. What will be the OUTPUT of the following statement?
--- the output is 0, I thought it would be 2 since there's two 
--- first tab ids that aren't in secondtab
+-- the output is 0, we can't compare if it's not in null, it gives nothing
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab )
 
