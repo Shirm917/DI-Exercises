@@ -49,8 +49,4 @@ FROM customer
 LEFT JOIN customer_profile
 ON customer.id = customer_profile.customer_id;
 -- The number of customers that are not LoggedIn
-SELECT COUNT(*) AS not_logged_in
-FROM customer
-INNER JOIN customer_profile
-ON customer.id = customer_profile.customer_id
-WHERE NOT isLoggedIn;
+SELECT COUNT(*) AS not_logged_in FROM customer_profile WHERE NOT isLoggedIn;
