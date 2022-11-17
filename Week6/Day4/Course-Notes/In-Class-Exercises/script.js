@@ -57,16 +57,11 @@ const products = [
     })
 })();
 
-const productsArray = [];
+const productsArray = JSON.parse(localStorage.getItem("products")) || [];
 function addToCart(event) {
     productsArray.push({name: event.target.parentElement.children[0].textContent, price: event.target.parentElement.children[2].textContent});
     console.log(productsArray);
     localStorage.setItem("products", JSON.stringify(productsArray));
 }
 
-function addEventListener() {
-    const payBtn = document.getElementById("payBtn");
-    payBtn.addEventListener("click", displayCart);
-}
-
-// addEventListener();
+// if the local storage is full you should take whatver is in the local storage
