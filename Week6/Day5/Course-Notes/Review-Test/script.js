@@ -138,7 +138,7 @@ const football = {
       spain : "Atlético Madrid",
     }
   }  
-const {type, clubs:{france: franceTeam}, clubs:{spain: spainTeam}} = football;
+const {type, clubs:{france: franceTeam, spain: spainTeam}} = football;
 
 // 23. Use object destructuring in the function to retrieve the value of the keys france and spain
 function retrieveSports ({type, clubs:{france: franceTeam}, clubs:{spain: spainTeam}}) {
