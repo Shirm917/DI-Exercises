@@ -18,6 +18,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use("/", express.static(__dirname + "/public"))
+
 app.listen(process.env.PORT, () => {
     console.log(`run on port ${process.env.PORT}`);
 });
@@ -30,6 +32,7 @@ app.delete("/api/products/:id", (req,res) => {
     db("products")
     .where({id})
     .del()
+    .returning('*')
     .then(rows => res.json(rows))
     .catch(err => {
         console.log(err);
