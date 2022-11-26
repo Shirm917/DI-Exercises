@@ -1,0 +1,16 @@
+<div>
+    <h2>Posts</h2>
+    <% content.forEach(element => { %>
+        <div>
+            <h4><a href=<%=`${element.link}`%>><%= element.title %></a></h4>
+            <span class="line"><%= element.pubDate %></span>
+            <span class="line"><%= element.creator %></span>
+            <span><%= element.categories.join(", ") %></span>
+            <p><%= element.contentSnippet %></p>
+        </div>
+    <% }); %>
+</div>
+
+
+
+
