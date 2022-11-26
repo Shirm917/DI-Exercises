@@ -44,7 +44,7 @@ app.get("/search", (req,res) => {
 app.post("/search/title", (req,res) => {
     const {title} = req.body;
     let feedItems;
-    async function test() {
+    async function feed() {
         let feed = await parser.parseURL("https://www.thefactsite.com/feed/")
         .then(result => {
             feedItems = result.items;
@@ -57,13 +57,13 @@ app.post("/search/title", (req,res) => {
         .then(data => res.render("pages/search", {content: data, items: feedItems}))
         .catch(err => res.status(404).json({msg: err.message}))
     }
-    test()
+    feed()
 });
 
 app.post("/search/category", (req,res) => {
     const {category} = req.body;
     let feedItems;
-    async function test() {
+    async function feed() {
         let feed = await parser.parseURL("https://www.thefactsite.com/feed/")
         .then(result => {
             feedItems = result.items;
@@ -75,5 +75,5 @@ app.post("/search/category", (req,res) => {
         .then(data => res.render("pages/search", {content: data, items: feedItems}))
         .catch(err => res.status(404).json({msg: err.message}))
     }
-    test()
+    feed()
 });
