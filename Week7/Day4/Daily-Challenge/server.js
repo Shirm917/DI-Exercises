@@ -14,17 +14,12 @@ app.use("/", express.static(__dirname + "/public"));
 app.post("/register", (req,res) => {
     const username = req.body.user;
     const password = req.body.pass;
-    const userMessages = {
-        registered: "Hello Your account is now created!",
-        userAndPassExists: "Username and Password already exist",
-        userExists: "Username already exists",
-        passExists: "Password already exists"
-    }
-
+   
     fs.readFile("usersData.json", "utf-8", (err, data) => {
         if (err) {
             console.log(err);
             fs.writeFile("usersData.json", JSON.stringify(req.body), err => {
+                res.json({msg: "Hello Your account is now created!"});
                 if (err) {
                     console.log(err);
                     return;
@@ -34,20 +29,19 @@ app.post("/register", (req,res) => {
         }
         const userData = JSON.parse(data);
         if(userData.user === username && userData.pass === password) {
-            res.send(JSON.stringify(userMessages.userAndPassExists));
+            res.json({msg: "Username and Password already exist"});
         } else if (userData.user === username) {
-            res.send(JSON.stringify(userMessages.userExists));
+            res.json({msg: "Username already exists"});
         } else if (userData.pass === password) {
-            res.send(JSON.stringify(userMessages.passExists));
+            res.json({msg: "Password already exists"});
         } else {
             fs.writeFile("usersData.json", JSON.stringify(req.body), err => {
                 if (err) {
                     console.log(err);
                     return;
                 }    
-            })
-
-            res.send(JSON.stringify(userMessages.registered));
+                res.json({msg: "Hello Your account is now created!"});
+            })  
         }
     })
 })
@@ -55,11 +49,7 @@ app.post("/register", (req,res) => {
 app.post("/login", (req,res) => {
     const username = req.body.user;
     const password = req.body.pass;
-    const userMessages = {
-        login: `Hi ${username} welcome back again!`,
-        usernameNotRegistered: "Username not registered",
-        passNotRegistered: "Password is incorrect",
-    }
+    
     fs.readFile("usersData.json", "utf-8", (err, data) => {
         if (err) {
             console.log(err);
@@ -67,11 +57,11 @@ app.post("/login", (req,res) => {
         }
         const userData = JSON.parse(data);
         if(userData.user === username && userData.pass === password) {
-            res.send(JSON.stringify(userMessages.login));
+            res.json({msg: `Hi ${username} welcome back again!`});
         } else if (userData.user !== username) {
-            res.send(JSON.stringify(userMessages.usernameNotRegistered));
+            res.json({msg: "Username not registered"});
         } else if (userData.pass !== password) {
-            res.send(JSON.stringify(userMessages.passNotRegistered));
+            res.json({msg: "Password is incorrect"});
         }
     })
 })

@@ -1,4 +1,5 @@
-function register() {
+function register(event) {
+    event.preventDefault();
     const fName = document.getElementById("fname").value;
     const lName = document.getElementById("lname").value;
     const email = document.getElementById("email").value;
@@ -20,11 +21,12 @@ function register() {
         body: JSON.stringify(userData)
     })
     .then(res => res.json())
-    .then(data => document.querySelector("p").textContent = `${data}`)
+    .then(data => document.querySelector("p").textContent = `${data.msg}`)
     .catch(err => console.log(err))
 }
 
-function login() {
+function login(event) {
+    event.preventDefault();
     const user = document.getElementById("user").value;
     const pass = document.getElementById("pass").value;
 
@@ -41,7 +43,7 @@ function login() {
         body: JSON.stringify(userData)
     })
     .then(res => res.json())
-    .then(data => document.querySelector("p").textContent = `${data}`)
+    .then(data => document.querySelector("p").textContent = `${data.msg}`)
     .catch(err => console.log(err))
 }
 
