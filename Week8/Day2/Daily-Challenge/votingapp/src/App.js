@@ -18,9 +18,9 @@ class App extends React.Component {
     }
   }
 
-  addVote = (event) => {
-    const name = event.target.parentNode.getAttribute("id");
-    this.setState({votes: this.state.languages[name].votes++})
+  addVote = (elem) => {
+    elem.votes++;
+    this.setState({languages:  [...this.state.languages]});
   }
 
   render() {
@@ -33,7 +33,7 @@ class App extends React.Component {
               <div key={index} id={element.id} >
                 <span>{element.votes}</span>
                 <span>{element.name}</span>
-                <button onClick={this.addVote}>Click Here</button>
+                <button onClick={() => this.addVote(element)}>Click Here</button>
               </div>
             )
         }) 
