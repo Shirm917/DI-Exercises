@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(128, 0, 128);
+}
+
+section {
+  background-color: white;
+  width: 70%;
+  height: 30%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  color: rgb(128, 0, 128);
+}
+
+button {
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+  top: -10%;
+  left: 65%;
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(128, 0, 128);
+}
+
+h1 {
+  margin-left: 5%;
+}
+
+p {
+  text-align: end;
+  padding: 5px;
+}
