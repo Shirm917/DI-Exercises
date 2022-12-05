@@ -2,6 +2,7 @@ import './App.css';
 import User from './components/User';
 import React from 'react';
 import Search from './components/Search';
+import {connect} from "react-redux";
 
 // let usersData = [
 //   {id:1, name:"Tim", username:"timtim", email:"tim@gmail.com"},
@@ -17,8 +18,8 @@ class App extends React.Component {
       title: "Users App",
       subTitle: "My Robots Users",
       usersData: [],
-      text: "",
-      text2: ""
+      // text: "",
+      // text2: ""
     }
   }
 
@@ -41,18 +42,18 @@ class App extends React.Component {
     })
   }
 
-  handleChange = (event) => {
-    this.setState({text: event.target.value})
-  }
+  // handleChange = (event) => {
+  //   this.setState({text: event.target.value})
+  // }
 
-  searchRobots = () => {
-    this.setState({text2: this.state.text})
-  }
+  // searchRobots = () => {
+  //   this.setState({text2: this.state.text})
+  // }
 
   render() {
-    const {title, subTitle, usersData, text2} = this.state;
+    const {title, subTitle, usersData} = this.state;
     const filterRobots = usersData.filter(element => {
-      return element.name.toLowerCase().includes(text2.toLowerCase());
+      return element.name.toLowerCase().includes(this.props.searchField.toLowerCase());
     });
 
     return (
@@ -60,9 +61,8 @@ class App extends React.Component {
         <h1>{title}</h1>
         <h2>{subTitle}</h2>
         <div>
-          <button onClick={this.changeTitles}>Change Title</button>
           {/* <button onClick={this.getUsers}>Get Users</button> */}
-          <Search handleChange={this.handleChange} searchRobots={this.searchRobots}/>
+          <Search />
         </div>
           {
             filterRobots.map((element, index) => {
@@ -76,4 +76,10 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    searchField: state.searchField
+  }
+}
+
+export default connect(mapStateToProps)(App);

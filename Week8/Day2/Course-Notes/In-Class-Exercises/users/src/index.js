@@ -5,12 +5,19 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 import AppForm from './AppForm';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {reducer} from "./reducers/"
+
+const store = createStore(reducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <AppForm />
+    <Provider store={store}>
+      <App />
+    </Provider>
+    {/* <AppForm /> */}
   </React.StrictMode>
 );
 
