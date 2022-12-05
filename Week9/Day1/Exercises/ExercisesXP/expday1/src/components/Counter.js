@@ -1,21 +1,14 @@
-import React from 'react';
 import {connect} from 'react-redux'
 import { DECREASE_COUNT, INCREASE_COUNT } from '../actions';
 
-class Counter extends React.Component {
-    constructor() {
-        super();
-    }
-
-    render() {
-        return (
-            <>
-                <button onClick={this.props.increaseCount}>+</button>
-                <p>{this.props.count}</p>
-                <button onClick={this.props.decreaseCount}>-</button>
-            </>
-        )
-    }
+const Counter = (props) => {
+    return (
+        <>
+            <button onClick={props.increaseCount}>+</button>
+            <p>{props.count}</p>
+            <button onClick={props.decreaseCount}>-</button>
+        </>
+    )
 }
 
 const mapStateToProps = (state) => {
