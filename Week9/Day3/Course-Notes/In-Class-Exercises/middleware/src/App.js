@@ -22,9 +22,10 @@ class App extends React.Component {
     })
 
     return (
+      this.props.robots.length === 0 ? <h1>Loading</h1> :
       <div className="tc">
         <Search />
-        <button onClick={this.props.getRobots}>Check</button>
+        {/* <button onClick={this.props.getRobots}>Check</button> */}
         {
           filterRobots.map(element => {
             return (
