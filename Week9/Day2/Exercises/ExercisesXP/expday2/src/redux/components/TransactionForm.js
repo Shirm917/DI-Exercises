@@ -15,8 +15,8 @@ class TransactionForm extends React.Component {
 
     componentDidUpdate(prevProps) {
         const {list,currentIndex} = this.props;
-        if(prevProps.currentIndex !== this.props.currentIndex && this.props.currentIndex !== -1) {
-            const transaction = this.props.list[this.props.currentIndex];
+        if(prevProps.currentIndex !== currentIndex && currentIndex !== -1) {
+            const transaction = list[currentIndex];
             this.setState({
                 accountNumber: transaction.accountNumber || "",
                 FSC: transaction.FSC || "",
@@ -37,6 +37,13 @@ class TransactionForm extends React.Component {
         } else {
             this.props.update(this.state);
         }
+
+        this.setState({
+            accountNumber: "",
+            FSC: "",
+            name: "",
+            amount: ""
+        })
     }
 
     render() {

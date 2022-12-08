@@ -1,0 +1,25 @@
+nav {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+
+nav > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.link {
+  margin: 1%;
+  background-color: #00008b;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+}
+
+section {
+  margin-top: 20%;
+}
+
+
