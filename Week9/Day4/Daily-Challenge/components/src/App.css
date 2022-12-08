@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+.card {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 80%;
+  height: 22vh;
+}
+
+p {
+  font-size: 80px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.icon {
+  margin-left: 5%;
+  margin-right: 2%;
+}
