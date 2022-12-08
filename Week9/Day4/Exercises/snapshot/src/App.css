@@ -22,4 +22,8 @@ section {
   margin-top: 20%;
 }
 
+img:hover {
+  transform: scale(1.1)
+}
+
 
