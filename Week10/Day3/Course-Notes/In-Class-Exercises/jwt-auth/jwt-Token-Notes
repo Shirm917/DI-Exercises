@@ -1,0 +1,19 @@
+import jwt from 'jsonwebtoken';
+
+// // .sign to create a token 
+// // parameters: payload(don't put sensitive stuff here),secret, expiration time(optional)
+const token = jwt.sign({name: "John", email: "jjj@gmail.com", id:123},"shfa%skjf$hjs",{expiresIn: "60s"});
+
+console.log(token);
+
+// // verify the token 
+// // paramters: token, secret(if it's not the same secret as the token you get an error, you can only verify the token if you have the secret),
+// //  a function (err,decode): err is the err, if the token is expired you get an err even if the secret is correct, 
+// // decode, decodes the payload if the secret matches(though anyone can decode the token) 
+jwt.verify(token, "shfa%skjf$hjs", (err,decode) => {
+    if (err) {
+        console.log(err);
+    } 
+    console.log(decode.name, decode.email);
+    console.log("valid");
+})
