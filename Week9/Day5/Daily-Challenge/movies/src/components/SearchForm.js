@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { searchMovie,fetchMovies } from '../redux/actions';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 class SearchForm extends React.Component {
     constructor() {
@@ -18,11 +20,11 @@ class SearchForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="search">
                 <form onSubmit={this.search}>
-                    <h1>Search for a movie or TV series</h1>
-                    <input type="text" onChange={this.getText} placeholder="Search movies,TV series..."/>
-                    <button>Search</button>
+                    <h1>Search for a Movie or TV series</h1>
+                    <TextField id="outlined-basic" label="Search Movies,TV series..." variant="outlined" onChange={this.getText}/>
+                    <Button type="submit" variant="text">Search</Button>
                 </form>
             </div>
         )

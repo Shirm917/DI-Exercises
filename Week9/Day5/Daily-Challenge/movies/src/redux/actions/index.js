@@ -16,20 +16,19 @@ export const fetchMovies = (text) => (dispatch) => {
             payload: data
         })
     })
-    .catch(err => console.log(err))
+    .catch()
 }
 
 export const fetchMovie = (id) => (dispatch) => {
     fetch(`https://www.omdbapi.com/?apikey=836f0a94&i=${id}`)
     .then(result => result.json())
     .then(data => {
-        console.log(data);
         dispatch({
             type: FETCH_MOVIE,
             payload: data
         })
     })
-    .catch(err => console.log(err))
+    .catch()
 
 }
 

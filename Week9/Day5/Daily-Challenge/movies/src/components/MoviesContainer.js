@@ -9,7 +9,7 @@ class MoviesContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="movieContainer">
                 {
                     this.props.movies.length === 0 ? null
                     :

@@ -1,17 +1,24 @@
-#movies img,
-#movie img {
-  width: 100%;
-}
-.brand-text {
-  font-size: 2rem;
+/* Movie Container */
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-@media (min-width: 960px) {
-  #movies .col-md-3 .well {
-    height: 390px;
-  }
+.movieTitle {
+  text-align: center;
+  /* width: 30px; */
+}
 
-  #movies .col-md-3 img {
-    height: 240px;
-  }
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Search */
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
 }
