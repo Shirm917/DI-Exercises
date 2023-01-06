@@ -15,7 +15,9 @@ class SearchForm extends React.Component {
 
     search = (event) => {
         event.preventDefault();
-        this.props.fetchMovies(this.props.text);
+        if (this.props.text) {
+            this.props.fetchMovies(this.props.text);
+        }
     }
 
     render() {
