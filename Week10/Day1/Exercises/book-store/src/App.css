@@ -1,0 +1,32 @@
+/* Header */
+.toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+/* Books */
+.books {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.books::after {
+    content: "";
+    flex: auto;
+}
+
+/* Search */
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+/* Sort Select */
+.sort {
+    height: 100%;
+    margin-left: 15px;
+    text-align: center;
+}
+
