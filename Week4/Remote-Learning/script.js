@@ -33,3 +33,32 @@ function join2() {
 }
 
 join2();
+
+// Question 2:
+// Write a javascript function that takes an array of numbers and a target number.
+
+// The function should find two different numbers in the array that, when added together, give the target number.
+
+// For example: answer([1,2,3], 4) should return [1,3]
+
+function findNumbers(arr,targetNum) {
+    const filteredArr = arr.filter(element => {
+        return element < targetNum;
+    });
+    if (filteredArr.length === 2) {
+        return filteredArr;
+    } else {
+        let total = targetNum
+        for (const arrNum of filteredArr) {
+            total -= arrNum;
+        };
+        const positiveTotal = Math.abs(total);
+        const finalArr = filteredArr.filter(element => {
+            return element !== positiveTotal;
+        })
+        return finalArr;
+    };
+};
+
+console.log(findNumbers([4,4,9], 8));
+

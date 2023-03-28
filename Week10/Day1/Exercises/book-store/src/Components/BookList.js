@@ -25,7 +25,7 @@ const BookList = (props) => {
     },[sort,books])
 
     return (
-        !books || books.length === 0 ? null
+        !sortedBooks || sortedBooks.length === 0 ? null
         : 
         <div className="books">
         {
