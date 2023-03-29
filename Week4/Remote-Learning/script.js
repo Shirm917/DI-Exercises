@@ -73,14 +73,13 @@ function hexToRgb(hex) {
     hexArr.splice(0,1);
     const rgbArr = [];
     for (let i = 0; i < hexArr.length; i++) {
-        if (i % 2 === 0 || i === 0) {
+        if (i % 2 === 0) {
             const num = parseInt(`${hexArr[i]}${hexArr[i + 1]}`,16);
             rgbArr.push(num);
         };
     }
-    console.log(rgbArr);
     return `rgb(${rgbArr[0]},${rgbArr[1]},${rgbArr[2]})`
 };
 
-console.log(hexToRgb("#123456"));
+console.log(hexToRgb("#d2d456"));
 
