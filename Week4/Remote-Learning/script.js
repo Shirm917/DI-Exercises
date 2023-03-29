@@ -60,5 +60,27 @@ function findNumbers(arr,targetNum) {
     };
 };
 
-console.log(findNumbers([4,4,9], 8));
+findNumbers([4,4,9], 8);
+
+// Write a function that converts HEX to RGB.
+
+// Then Make that function auto-detect the formats so that if you enter HEX color format it returns RGB and if you enter RGB color format it returns HEX.
+
+
+
+function hexToRgb(hex) {
+    const hexArr = hex.split("");
+    hexArr.splice(0,1);
+    const rgbArr = [];
+    for (let i = 0; i < hexArr.length; i++) {
+        if (i % 2 === 0 || i === 0) {
+            const num = parseInt(`${hexArr[i]}${hexArr[i + 1]}`,16);
+            rgbArr.push(num);
+        };
+    }
+    console.log(rgbArr);
+    return `rgb(${rgbArr[0]},${rgbArr[1]},${rgbArr[2]})`
+};
+
+console.log(hexToRgb("#123456"));
 
