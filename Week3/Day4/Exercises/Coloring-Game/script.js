@@ -35,20 +35,27 @@ createGrid();
 // function to color every div with the color chosen
 function colorPen(event) {
     if (event.buttons == 0) {
-        event.stopPropagation();  
+        event.stopPropagation();
     } else {
-        event.target.setAttribute("style", color); 
+        event.target.setAttribute("style", color);
     }
 }
 
 // event listener for the button
-const btnElement = document.querySelector("button");
-btnElement.addEventListener("click", clear);
+const clearBtnElement = document.querySelector(".clearBtn");
+clearBtnElement.addEventListener("click", clear);
 // function to clear everything, change every right side div back to white
 function clear() {
     const divsRight = document.querySelectorAll(".grid-right > div")
     for (const div of divsRight) {
        div.removeAttribute("style", color);
     }
+}
+
+const eraserBtnElement = document.querySelector(".eraserBtn");
+eraserBtnElement.addEventListener("click", eraser);
+
+function eraser() {
+    color = "white";
 }
 
