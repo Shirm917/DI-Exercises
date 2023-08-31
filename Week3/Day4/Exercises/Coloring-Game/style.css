@@ -13,15 +13,6 @@ button {
   grid-column: 1 / 4;
 }
 
-button,
-input {
-}
-
-input {
-  /* height: 20%; */
-  grid-column: 1 / 4;
-}
-
 .grid-right,
 .grid-left {
   display: grid;
@@ -38,7 +29,7 @@ input {
 
 .grid-left > div {
   border: 1px solid black;
-  width: 40px;
+  width: 90%;
 }
 
 .grid-right {
@@ -53,4 +44,5 @@ input {
 .grid-right > div {
   border: 1px solid gray;
   background-color: white;
+  width: 100%;
 }
