@@ -70,9 +70,9 @@ function colorPen(event) {
 function addBtnEventListeners() {
   const squareAmountBtn = document.getElementById("squareAmountBtn");
   squareAmountBtn.addEventListener("click", getSquareAmount);
-  const clearBtnElement = document.querySelector(".clearBtn");
+  const clearBtnElement = document.getElementById("clearBtn");
   clearBtnElement.addEventListener("click", clear);
-  const eraserBtnElement = document.querySelector(".eraserBtn");
+  const eraserBtnElement = document.getElementById("eraserBtn");
   eraserBtnElement.addEventListener("click", eraser);
 }
 
