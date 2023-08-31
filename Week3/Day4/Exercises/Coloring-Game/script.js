@@ -22,7 +22,7 @@ const colors = [
   "black",
   "white",
 ];
-function createColors() {
+(function () {
   const sectionElement1 = document.body.firstElementChild;
   for (let i = 0; i < 21; i++) {
     const divElement = document.createElement("div");
@@ -30,9 +30,7 @@ function createColors() {
     divElement.style.background = colors[i];
     divElement.addEventListener("click", retrieveColor);
   }
-}
-
-createColors();
+})();
 
 // function to retrieve the backgroundcolor of each div and return it
 let color;
@@ -67,19 +65,16 @@ function colorPen(event) {
   }
 }
 
-function addBtnEventListeners() {
+(function () {
   const squareAmountBtn = document.getElementById("squareAmountBtn");
   squareAmountBtn.addEventListener("click", getSquareAmount);
   const clearBtnElement = document.getElementById("clearBtn");
   clearBtnElement.addEventListener("click", clear);
   const eraserBtnElement = document.getElementById("eraserBtn");
   eraserBtnElement.addEventListener("click", eraser);
-}
-
-addBtnEventListeners();
+})();
 
 function getSquareAmount() {
-  console.log("test");
   squareAmount = prompt("Enter Square Amount");
   while (isNaN(squareAmount) || squareAmount <= 0 || squareAmount > 1200) {
     squareAmount = prompt(
