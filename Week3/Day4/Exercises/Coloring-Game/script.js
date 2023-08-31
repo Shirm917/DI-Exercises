@@ -57,5 +57,5 @@ eraserBtnElement.addEventListener("click", eraser);
 
 function eraser() {
     color = "white";
-}
+};
 

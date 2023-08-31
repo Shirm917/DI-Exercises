@@ -1,49 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: gray;
+  background-color: gray;
 }
 
 button {
-    background-color: white;
-    width: 100%;
-    grid-column: 1 / 4;
+  background-color: white;
+  width: 100%;
+  grid-column: 1 / 4;
+}
+
+button,
+input {
+}
+
+input {
+  /* height: 20%; */
+  grid-column: 1 / 4;
 }
 
 .grid-right,
 .grid-left {
-    display: grid;
+  display: grid;
 }
 
 .grid-left {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    /* background-color: blue; */
-    width: 20%;
-    height: 100vh;
-    position: absolute;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  /* background-color: blue; */
+  width: 20%;
+  height: 100vh;
+  position: absolute;
 }
 
 .grid-left > div {
-    border: 1px solid black;
-    width: 40px;
+  border: 1px solid black;
+  width: 40px;
 }
 
 .grid-right {
-    grid-template-columns: repeat(60, 1fr);
-    grid-template-rows: repeat(20, 1fr);
-    position: absolute;
-    right: 0;
-    width: 80%;
-    height: 100vh;
+  grid-template-columns: repeat(60, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  position: absolute;
+  right: 0;
+  width: 80%;
+  height: 100vh;
 }
 
 .grid-right > div {
-    border: 1px solid gray;
-    background-color: white;
+  border: 1px solid gray;
+  background-color: white;
 }
-
-
