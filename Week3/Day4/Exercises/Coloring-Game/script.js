@@ -38,8 +38,8 @@ function retrieveColor(event) {
   color = event.target.attributes[0].value;
 }
 
-let squareAmount = 1200;
 // function to create the right grid, looping through to create 1200 divs
+let squareAmount = 1200;
 function createGrid() {
   const sectionElement2 = document.body.children[1];
   while (sectionElement2.firstChild) {
@@ -87,7 +87,7 @@ function getSquareAmount() {
 function clear() {
   const divsRight = document.querySelectorAll(".grid-right > div");
   for (const div of divsRight) {
-    div.removeAttribute("style", color);
+    div.removeAttribute("style");
   }
 }
 
