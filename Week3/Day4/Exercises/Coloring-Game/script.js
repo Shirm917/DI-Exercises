@@ -49,7 +49,6 @@ function createGrid() {
     const divElement2 = document.createElement("div");
     sectionElement2.append(divElement2);
     divElement2.addEventListener("mousedown", colorPen);
-    divElement2.addEventListener("mouseup", colorPen);
     divElement2.addEventListener("mouseover", colorPen);
   }
 }
@@ -58,8 +57,8 @@ createGrid();
 
 // function to color every div with the color chosen
 function colorPen(event) {
-  if (event.buttons == 0) {
-    event.stopPropagation();
+  if (event.buttons === 0) {
+    return;
   } else {
     event.target.setAttribute("style", color);
   }
