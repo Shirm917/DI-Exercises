@@ -7,9 +7,6 @@ body {
   background-color: gray;
 }
 
-button {
-  background-color: white;
-}
 
 .grid-right,
 .grid-left {
@@ -18,7 +15,7 @@ button {
 
 .grid-left {
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   width: 30%;
   height: 100vh;
   position: absolute;
@@ -42,4 +39,12 @@ button {
   border: 1px solid gray;
   background-color: white;
   width: 100%;
+}
+
+button {
+  background-color: white;
+}
+
+#squareAmountBtn {
+  grid-column: 1 / 4;
 }
