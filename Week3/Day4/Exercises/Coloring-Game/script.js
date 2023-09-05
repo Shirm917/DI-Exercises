@@ -34,8 +34,10 @@ const colors = [
 
 // function to retrieve the backgroundcolor of each div and return it
 let color;
+
 function retrieveColor(event) {
-  color = event.target.attributes[0].value;
+    color = event.target.attributes[0].value;
+    setFillNameColor();
 }
 
 // function to create the right grid, looping through to create 1200 divs
@@ -64,6 +66,7 @@ function colorPen(event) {
   }
 }
 
+const fillBtn = document.getElementById("fillBtn");
 (function () {
   const squareAmountBtn = document.getElementById("squareAmountBtn");
   squareAmountBtn.addEventListener("click", getSquareAmount);
@@ -71,7 +74,6 @@ function colorPen(event) {
   clearBtn.addEventListener("click", clear);
   const eraserBtn = document.getElementById("eraserBtn");
   eraserBtn.addEventListener("click", eraser);
-  const fillBtn = document.getElementById("fillBtn");
   fillBtn.addEventListener("click", fill);
 })();
 
@@ -91,14 +93,19 @@ function clear() {
   for (const div of divsRight) {
     div.removeAttribute("style");
   }
+  fillBtn.style.background = "white";
 }
 
 function eraser() {
-  color = "white";
+  color = "background: white;";
 }
 
 function fill() {
   for (const div of divsRight) {
     div.setAttribute("style", color);
   }
+}
+
+function setFillNameColor() {
+  fillBtn.setAttribute("style", color);
 }
