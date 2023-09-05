@@ -44,7 +44,7 @@ function createGrid() {
   const sectionElement2 = document.body.children[1];
   while (sectionElement2.firstChild) {
     sectionElement2.removeChild(sectionElement2.firstChild);
-  };
+  }
   for (let i = 0; i < squareAmount; i++) {
     const divElement2 = document.createElement("div");
     sectionElement2.append(divElement2);
@@ -67,10 +67,12 @@ function colorPen(event) {
 (function () {
   const squareAmountBtn = document.getElementById("squareAmountBtn");
   squareAmountBtn.addEventListener("click", getSquareAmount);
-  const clearBtnElement = document.getElementById("clearBtn");
-  clearBtnElement.addEventListener("click", clear);
-  const eraserBtnElement = document.getElementById("eraserBtn");
-  eraserBtnElement.addEventListener("click", eraser);
+  const clearBtn = document.getElementById("clearBtn");
+  clearBtn.addEventListener("click", clear);
+  const eraserBtn = document.getElementById("eraserBtn");
+  eraserBtn.addEventListener("click", eraser);
+  const fillBtn = document.getElementById("fillBtn");
+  fillBtn.addEventListener("click", fill);
 })();
 
 function getSquareAmount() {
@@ -84,8 +86,8 @@ function getSquareAmount() {
 }
 
 // function to clear everything, change every right side div back to white
+const divsRight = document.querySelectorAll(".grid-right > div");
 function clear() {
-  const divsRight = document.querySelectorAll(".grid-right > div");
   for (const div of divsRight) {
     div.removeAttribute("style");
   }
@@ -93,4 +95,10 @@ function clear() {
 
 function eraser() {
   color = "white";
+}
+
+function fill() {
+  for (const div of divsRight) {
+    div.setAttribute("style", color);
+  }
 }
