@@ -36,8 +36,8 @@ const colors = [
 let color;
 
 function retrieveColor(event) {
-    color = event.target.attributes[0].value;
-    setFillNameColor();
+  color = event.target.attributes[0].value;
+  setFillNameColor();
 }
 
 // function to create the right grid, looping through to create 1200 divs
@@ -88,8 +88,8 @@ function getSquareAmount() {
 }
 
 // function to clear everything, change every right side div back to white
-const divsRight = document.querySelectorAll(".grid-right > div");
 function clear() {
+  const divsRight = document.querySelectorAll(".grid-right > div");
   for (const div of divsRight) {
     div.removeAttribute("style");
   }
@@ -101,6 +101,7 @@ function eraser() {
 }
 
 function fill() {
+  const divsRight = document.querySelectorAll(".grid-right > div");
   for (const div of divsRight) {
     div.setAttribute("style", color);
   }
